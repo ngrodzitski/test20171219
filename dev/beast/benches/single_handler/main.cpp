@@ -7,6 +7,7 @@
 #include <beast/http.hpp>
 #include <beast/core/handler_ptr.hpp>
 #include <beast/core/multi_buffer.hpp>
+#include <beast/core/flat_buffer.hpp>
 #include <boost/asio.hpp>
 
 using namespace beast;
@@ -156,7 +157,7 @@ private:
     class peer : public std::enable_shared_from_this<peer>
     {
         int id_;
-        multi_buffer sb_;
+        flat_buffer sb_{ 4096 };
         socket_type sock_;
         http_async_server& server_;
         // boost::asio::io_service::strand strand_;
@@ -208,7 +209,7 @@ private:
             res.insert(field::server, "Beast benchmark");
             res.insert(field::content_type, "text/plain; charset=utf-8");
             res.body = "Hello world!";
-            res.prepare();
+            res.prepare_payload();
             async_write(sock_, std::move(res),
                 std::bind(&peer::on_write, shared_from_this(),
                     std::placeholders::_1));

@@ -17,11 +17,11 @@ And that is the kind of question I am trying to answer with this benchmark.
 
 Frameworks to test:
 
-* [Beast](https://github.com/vinniefalco/Beast);
-* [Cpprestsdk](https://github.com/Microsoft/cpprestsdk);
-* [Restbed](https://github.com/Corvusoft/restbed);
-* [Pistache](https://github.com/oktal/pistache);
-* [RESTinio](https://bitbucket.org/sobjectizerteam/restinio-0.2).
+* [Beast](https://github.com/vinniefalco/Beast) v63 (2017.06.21);
+* [Cpprestsdk](https://github.com/Microsoft/cpprestsdk) commit 'e1933685bc2d5bb8395c6e6c7fd6850398654098' (2017.06.21);
+* [Restbed](https://github.com/Corvusoft/restbed) 4.5;
+* [Pistache](https://github.com/oktal/pistache) commit '7b2b963d5e76a12afa2d921c5d12e5c980e054a0' (2017.06.21);
+* [RESTinio](https://bitbucket.org/sobjectizerteam/restinio-0.2) v.0.2.1.
 
 More frameworks may be added later.
 
@@ -102,7 +102,7 @@ The following environment was used for benchmarks:
 | pure-asio            | 517737.34 |            100%            |
 | pistache             | 210043.62 |           40.57%           |
 | RESTinio (no timers) | 152683.06 |           29.49%           |
-| Beast                | 131503.64 |           25.40%           |
+| Beast                | 145949.15 |           28.19%           |
 | RESTinio (timers)    | 115309.33 |           22.27%           |
 | Restbed              |  58223.26 |           11.25%           |
 | Cpprestsdk           |  9487.37  |            1.83%           |
@@ -126,7 +126,7 @@ Results: 517737.34 req/seq. And that is a 100% result.
 
 [Benchmark implementation](./dev/beast/benches/single_handler/main.cpp).
 
-Results: 131503.64 req/seq. And that is a 25.40% result.
+Results: 145949.15 req/seq. And that is a 28.19% result.
 
 ### cpprestsdk implementation
 
@@ -184,7 +184,7 @@ For sample instructions on how to build benchmarks refer to the following two se
 ```
 wget https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017/downloads/restinio-benchmark-jun2017-0.1.1.tar.bz2
 tar xjvf restinio-benchmark-jun2017-0.1.1.tar.bz2
-cd restinio-benchmark-jun2017-0.1.0/dev
+cd restinio-benchmark-jun2017-0.1.1/dev
 ./build_benches.sh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/_bench_run/lib
 cd _bench_run/bin

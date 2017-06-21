@@ -7,7 +7,7 @@ require 'mxx_ru/externals'
 
 MxxRu::git_externals :cpprestsdk do |e|
   e.url 'https://github.com/Microsoft/cpprestsdk.git'
-  e.commit '0a9ca2c33236ccd6137a0645e152c97cf9a6384f'
+  e.commit 'e1933685bc2d5bb8395c6e6c7fd6850398654098'
 
   e.map_dir 'Release/include' => 'dev/cpprestsdk'
   e.map_dir 'Release/src' => 'dev/cpprestsdk'
@@ -26,7 +26,7 @@ end
 
 MxxRu::git_externals :beast do |e|
   e.url 'https://github.com/vinniefalco/Beast.git'
-  e.commit '4c15db48488cf292af76a8f4509686306b76449f'
+  e.commit 'f68dc343e7c077caee8a95b2a59a2ccb9f979567'
 
   e.map_dir 'include' => 'dev/beast'
 end
