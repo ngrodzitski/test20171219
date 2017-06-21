@@ -182,9 +182,9 @@ For sample instructions on how to build benchmarks refer to the following two se
 ### Obtain and build from archive
 
 ```
-wget https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017/downloads/restinio-benchmark-jun2017-0.1.1.tar.bz2
-tar xjvf restinio-benchmark-jun2017-0.1.1.tar.bz2
-cd restinio-benchmark-jun2017-0.1.1/dev
+wget https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017/downloads/restinio-benchmark-jun2017-0.1.2.tar.bz2
+tar xjvf restinio-benchmark-jun2017-0.1.2.tar.bz2
+cd restinio-benchmark-jun2017-0.1.2/dev
 ./build_benches.sh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/_bench_run/lib
 cd _bench_run/bin
@@ -197,7 +197,7 @@ To build benchmarks from repository, you sould have Ruby and Mxx_ru (gem) instal
 ```
 hg clone https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017
 cd restinio-benchmark-jun2017
-hg up v.0.1.1
+hg up v.0.1.2
 mxxruexternals
 cd dev
 ./build_benches.sh
