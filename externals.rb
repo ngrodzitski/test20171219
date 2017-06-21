@@ -31,6 +31,14 @@ MxxRu::git_externals :beast do |e|
   e.map_dir 'include' => 'dev/beast'
 end
 
+MxxRu::git_externals :pistache do |e|
+  e.url 'https://github.com/oktal/pistache.git'
+  e.commit '7b2b963d5e76a12afa2d921c5d12e5c980e054a0'
+
+  e.map_dir 'include' => 'dev/pistache'
+  e.map_dir 'src' => 'dev/pistache'
+end
+
 MxxRu::arch_externals :asio_pure_asio_dep do |e|
   e.url 'https://github.com/chriskohlhoff/asio/archive/asio-1-11-0.tar.gz'
   e.sha1 '1be2489015a1e1c7b8666a5a803d984cdec4a12b'
