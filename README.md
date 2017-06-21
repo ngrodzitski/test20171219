@@ -105,6 +105,15 @@ The following environment was used for benchmarks:
 | Restbed              |  58223.26 |           11.25%           |
 | Cpprestsdk           |  9487.37  |            1.83%           |
 
+Well, benchmarks with very simple logic (like in this case) cannot be considered a firm base
+for deciding what framework to use in you project.
+But still some conclusions can be made:
+
+* for any of the frameworks tested here the cost of
+parsing, preparing and handling various objects that form library API
+is noticeably more expensive than handling tcp-connections and doing IO.
+* Cpprestsdk under linux is very expensive.
+
 ### Pure asio implementation
 
 [Benchmark implementation](./dev/pure_asio/benches/single_handler/main.cpp).
