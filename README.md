@@ -58,6 +58,8 @@ See full implementation [here](./dev/pure_asio/benches/single_handler/main.cpp).
 Although pure-asio bench implementation and all framework-base implementations
 (except cpprestsdk) have an option to set the number of threads that asio runs on,
 for all benchmarks a single thread for asio is used.
+So for now we are measuring framework tradeoffs on a single thread
+(except cpprestsdk). Benchmarks with request handling on N>1 threads will be added later.
 
 ## Benchmark tool and parameters
 
