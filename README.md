@@ -18,9 +18,9 @@ And that is the kind of question I am trying to answer with this benchmark.
 Frameworks to test:
 
 * [Beast](https://github.com/vinniefalco/Beast) v63 (2017.06.21);
-* [Cpprestsdk](https://github.com/Microsoft/cpprestsdk) commit 'e1933685bc2d5bb8395c6e6c7fd6850398654098' (2017.06.21);
+* [Cpprestsdk](https://github.com/Microsoft/cpprestsdk) commit `e1933685bc2d5bb8395c6e6c7fd6850398654098` (2017.06.21);
 * [Restbed](https://github.com/Corvusoft/restbed) 4.5;
-* [Pistache](https://github.com/oktal/pistache) commit '7b2b963d5e76a12afa2d921c5d12e5c980e054a0' (2017.06.21);
+* [Pistache](https://github.com/oktal/pistache) commit `7b2b963d5e76a12afa2d921c5d12e5c980e054a0` (2017.06.21);
 * [RESTinio](https://bitbucket.org/sobjectizerteam/restinio-0.2) v.0.2.1.
 
 More frameworks may be added later.
