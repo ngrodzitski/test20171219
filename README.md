@@ -20,6 +20,7 @@ Frameworks to test:
 * [Beast](https://github.com/vinniefalco/Beast);
 * [Cpprestsdk](https://github.com/Microsoft/cpprestsdk);
 * [Restbed](https://github.com/Corvusoft/restbed);
+* [Pistache](https://github.com/oktal/pistache);
 * [RESTinio](https://bitbucket.org/sobjectizerteam/restinio-0.2).
 
 More frameworks may be added later.
@@ -99,6 +100,7 @@ The following environment was used for benchmarks:
 |       bench\res      |  req/sec  | compared to pure-asio impl |
 |:--------------------:|:---------:|:--------------------------:|
 | pure-asio            | 517737.34 |            100%            |
+| pistache             | 210043.62 |           40.57%           |
 | RESTinio (no timers) | 152683.06 |           29.49%           |
 | Beast                | 131503.64 |           25.40%           |
 | RESTinio (timers)    | 115309.33 |           22.27%           |
@@ -138,6 +140,12 @@ Results: 9487.37 req/seq. And that is a 1.83% result.
 
 Results: 58223.26 req/seq. And that is a 11.25% result.
 
+### Pistache implementation
+
+[Benchmark implementation](./dev/pistache/benches/single_handler/main.cpp).
+
+Results: 210043.62 req/seq. And that is a 40.57% result.
+
 ### RESTinio implementations
 
 *With no timeout guards for io operations*
@@ -174,8 +182,8 @@ For sample instructions on how to build benchmarks refer to the following two se
 ### Obtain and build from archive
 
 ```
-wget https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017/downloads/restinio-benchmark-jun2017-0.1.0.tar.bz2
-tar xjvf restinio-benchmark-jun2017-0.1.0.tar.bz2
+wget https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017/downloads/restinio-benchmark-jun2017-0.1.1.tar.bz2
+tar xjvf restinio-benchmark-jun2017-0.1.1.tar.bz2
 cd restinio-benchmark-jun2017-0.1.0/dev
 ./build_benches.sh
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/_bench_run/lib
@@ -189,6 +197,7 @@ To build benchmarks from repository, you sould have Ruby and Mxx_ru (gem) instal
 ```
 hg clone https://bitbucket.org/sobjectizerteam/restinio-benchmark-jun2017
 cd restinio-benchmark-jun2017
+hg up v.0.1.1
 mxxruexternals
 cd dev
 ./build_benches.sh
