@@ -39,6 +39,12 @@ MxxRu::git_externals :pistache do |e|
   e.map_dir 'src' => 'dev/pistache'
 end
 
+MxxRu::arch_externals :args_pistache_dep do |e|
+  e.url 'https://github.com/Taywee/args/archive/6.0.4.tar.gz'
+
+  e.map_file 'args.hxx' => 'dev/pistache/args/*'
+end
+
 MxxRu::arch_externals :asio_pure_asio_dep do |e|
   e.url 'https://github.com/chriskohlhoff/asio/archive/asio-1-11-0.tar.gz'
   e.sha1 '1be2489015a1e1c7b8666a5a803d984cdec4a12b'

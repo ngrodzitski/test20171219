@@ -15,6 +15,7 @@ dev/restbed/dependency
 dev/restbed/source
 dev/pistache/include
 dev/pistache/src
+dev/pistache/args
 dev/_bench_run
 dev/restinio/args
 dev/restinio/asio
