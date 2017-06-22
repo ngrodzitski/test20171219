@@ -87,6 +87,7 @@ run_app( const app_args_t args )
 
 	server_settings_t settings{};
 	settings.address( "localhost" );
+	settings.buffer_size( 1024 );
 
 	if( !args.m_config_file.empty() )
 	{

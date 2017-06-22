@@ -157,7 +157,7 @@ private:
     class peer : public std::enable_shared_from_this<peer>
     {
         int id_;
-        flat_buffer sb_{ 4096 };
+        flat_buffer sb_{ 1024 };
         socket_type sock_;
         http_async_server& server_;
         // boost::asio::io_service::strand strand_;
