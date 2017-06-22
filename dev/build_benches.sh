@@ -12,7 +12,7 @@ cd cpprestsdk
 mkdir cmake_build
 cd cmake_build
 cmake -DCMAKE_INSTALL_PREFIX=../../_bench_run -DCMAKE_BUILD_TYPE=Release ..
-make && make install
+make -j4 && make install
 cd ../../
 
 echo -- restbed --
@@ -20,7 +20,7 @@ cd restbed
 mkdir cmake_build
 cd cmake_build
 cmake -DCMAKE_INSTALL_PREFIX=../../_bench_run -DCMAKE_BUILD_TYPE=Release ..
-make && make install
+make -j4 && make install
 cd ../../
 
 echo -- pistache --

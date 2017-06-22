@@ -100,7 +100,7 @@ The following environment was used for benchmarks:
 |       bench\res      |  req/sec  | compared to pure-asio impl |
 |:--------------------:|:---------:|:--------------------------:|
 | pure-asio            | 517737.34 |            100%            |
-| pistache             | 210043.62 |           40.57%           |
+| Pistache             | 163593.97 |           31.60%           |
 | RESTinio (no timers) | 152683.06 |           29.49%           |
 | Beast                | 145949.15 |           28.19%           |
 | RESTinio (timers)    | 115309.33 |           22.27%           |
@@ -115,6 +115,13 @@ But still some conclusions can be made:
 parsing, preparing and handling various objects that form library API
 is noticeably more expensive than handling tcp-connections and doing IO.
 * Cpprestsdk under linux is very expensive.
+
+### Update 2017.06.22
+
+After making Pistache implementation to return the same set of header fields
+as Beast and RESTinio implementations ('Server' and 'Content-type')
+its performance went down from 210043.62 req/sec (40.57%)
+to 163593.97 (31.60%).
 
 ### Pure asio implementation
 
@@ -144,7 +151,7 @@ Results: 58223.26 req/seq. And that is a 11.25% result.
 
 [Benchmark implementation](./dev/pistache/benches/single_handler/main.cpp).
 
-Results: 210043.62 req/seq. And that is a 40.57% result.
+Results: 163593.97 req/seq. And that is a 31.60% result.
 
 ### RESTinio implementations
 
