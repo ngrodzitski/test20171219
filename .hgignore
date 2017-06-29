@@ -27,6 +27,7 @@ dev/restinio/json_dto
 dev/restinio/rapidjson
 dev/restinio/rapidjson_mxxru
 dev/restinio/restinio
+dev/web_cardan/ext
 o/*
 *.sublime-project
 *.sublime-workspace

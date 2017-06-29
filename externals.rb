@@ -39,6 +39,14 @@ MxxRu::git_externals :pistache do |e|
   e.map_dir 'src' => 'dev/pistache'
 end
 
+MxxRu::git_externals :web_cardan do |e|
+  e.url 'https://github.com/masterspline/web_cardan.git'
+  e.recursive
+  # e.commit '58aed0a7c27a00b4125e770388a6407466551dc2'
+
+  e.map_dir 'ext' => 'dev/web_cardan'
+end
+
 MxxRu::arch_externals :args_pistache_dep do |e|
   e.url 'https://github.com/Taywee/args/archive/6.0.4.tar.gz'
 

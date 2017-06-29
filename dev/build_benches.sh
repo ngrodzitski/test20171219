@@ -47,3 +47,11 @@ cmake -DCMAKE_INSTALL_PREFIX=../../_bench_run -DCMAKE_BUILD_TYPE=Release ..
 make && make install
 cd ../../
 
+echo -- web_cardan --
+cd web_cardan
+mkdir cmake_build
+cd cmake_build
+cmake -DCMAKE_INSTALL_PREFIX=../../_bench_run -DCMAKE_BUILD_TYPE=Release ..
+make && make install
+cd ../../
+
